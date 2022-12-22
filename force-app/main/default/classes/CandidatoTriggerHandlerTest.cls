@@ -57,7 +57,7 @@ public with sharing class CandidatoTriggerHandlerTest {
 
         System.assert(!candidato.Documentos_faltantes1__c.contains('Certificado policía'));
         
-        System.assert(!candidato.Documentos_faltantes1__c.contains('Certificado de vacúna COVID 19'));
+        System.assert(!candidato.Documentos_faltantes1__c.contains('Certificado de vacuna COVID 19'));
 		
     }
 	
@@ -95,7 +95,7 @@ public with sharing class CandidatoTriggerHandlerTest {
 
         System.assert(candidato.Documentos_faltantes1__c.contains('Certificado policía'));
         
-        System.assert(candidato.Documentos_faltantes1__c.contains('Certificado de vacúna COVID 19'));
+        System.assert(candidato.Documentos_faltantes1__c.contains('Certificado de vacuna COVID 19'));
         
         delete candidato;
         undelete candidato;

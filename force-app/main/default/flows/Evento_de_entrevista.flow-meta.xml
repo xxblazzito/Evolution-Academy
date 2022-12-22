@@ -138,6 +138,10 @@
             <fieldText>Fecha y hora de inicio</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>true</isRequired>
+            <validationRule>
+                <errorMessage>&lt;p&gt;El evento no puede durar más de 14 días &lt;/p&gt;</errorMessage>
+                <formulaExpression>IF(({!Fecha_y_hora_de_fin}-{!Fecha_y_hora_de_inicio}) &gt; 14 , false, true)</formulaExpression>
+            </validationRule>
         </fields>
         <fields>
             <name>Fecha_y_hora_de_fin</name>
@@ -145,6 +149,10 @@
             <fieldText>Fecha y hora de fin</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>true</isRequired>
+            <validationRule>
+                <errorMessage>&lt;p&gt;La Fecha y hora de fin no puede ser menor a la Fecha y hora de inicio&lt;/p&gt;</errorMessage>
+                <formulaExpression>IF(({!Fecha_y_hora_de_fin} &lt; {!Fecha_y_hora_de_inicio} ), false, true)</formulaExpression>
+            </validationRule>
         </fields>
         <fields>
             <name>Candidat</name>
